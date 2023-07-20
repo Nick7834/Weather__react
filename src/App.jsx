@@ -43,7 +43,7 @@ function App() {
       const apiKeys = 'ff7dc3a1cf2847a985692006231206';
 
       async function getCity(search) {
-          const map = `http://api.weatherapi.com/v1/forecast.json?key=${apiKeys}&q=${search}`;
+          const map = `https://api.weatherapi.com/v1/forecast.json?key=${apiKeys}&q=${search}`;
           const response = await fetch(map);
           const data = await response.json();
 

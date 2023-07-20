@@ -73,7 +73,7 @@ export const GridW = ({weatherAdd}) => {
         <div className={`${styles.three} ${styles.threes}`}>
               <div className={styles.block}>
                  <div className={styles.blocks}>
-                  <img className={styles.icon} src="./public/minT.svg" alt="icon" />
+                  <img className={styles.icon} src="./minT.svg" alt="icon" />
                     <div className={styles.flex}>
                       <div className={styles.name}>Min temp</div>
                       <div className={styles.result}>{weatherAdd?.forecast?.forecastday[0].day.mintemp_c}°C</div>
