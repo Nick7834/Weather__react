@@ -145,6 +145,8 @@ function App() {
         ipAll()
       }, []); 
 
+      // Анимация, рефакторинг
+
   return (
     <div className='weathers'>
       <div className="container">
