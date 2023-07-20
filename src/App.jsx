@@ -24,7 +24,7 @@ function App() {
 
     // active block 
 
-    const [active, setActive] = useState(false);
+    // const [active, setActive] = useState(false);
 
     // input value
 
@@ -161,10 +161,6 @@ function App() {
 
                <GridW weatherAdd={weather} /> 
             </div>}
-
-            
-
-           
 
         </div>
       </div>
