@@ -48,7 +48,7 @@
     gap: clamp(0.938rem, calc(-1.06rem + 3.26vw), 1.875rem);
 
 
-    @media (width < 980px) {
+    @media (max-width: 980px) {
         grid-template-areas: 
         "four"
         "five"
