@@ -51,7 +51,7 @@ function App() {
 
           if (data.error) {
             setWeather(data)
-            setActive(true)
+            // setActive(true)
           } else {
               const info = condition.find(obj => obj.code === data.current.condition.code);
               const idData = data.current.is_day;
