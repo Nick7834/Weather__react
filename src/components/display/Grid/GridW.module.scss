@@ -116,7 +116,7 @@
             background-color: rgba(230, 230, 230, 0);
             border-radius: 20px;
 
-            @media (width <= 980px) {
+            @media (max-width: 980px) {
                 width: 0px;
                 height: 0px;
              }
@@ -136,7 +136,7 @@
                         background-color: rgb(69, 87, 103, 1);
                     }
 
-                    @media (width <= 980px) {
+                    @media (max-width: 980px) {
 
                             &::-webkit-scrollbar {
                                 background-color: rgba(230, 230, 230, 0);
@@ -162,7 +162,7 @@
 
        grid-area: five;
 
-            @media (width <= 980px) {
+            @media (max-width: 980px) {
                 padding: 50px 10px 10px;
             }
     }
@@ -172,7 +172,7 @@
         flex-direction: column;
         gap: 20px;
 
-        @media (width <= 980px) {
+        @media (max-width: 980px) {
             flex-direction: row;
             justify-content: space-between;
             gap: 55px;
@@ -194,7 +194,7 @@
 
         margin-bottom: 20px;
 
-        @media (width <= 980px) {
+        @media (max-width: 980px) {
            position: absolute;
            top: 10px;
            left: 25px;
@@ -208,7 +208,7 @@
        align-items: center;
        gap: 5px;
 
-        @media (width <= 980px) {
+        @media (max-width: 980px) {
             flex-direction: column;
             gap: 0;
             text-align: center;
@@ -221,7 +221,7 @@
         @include title;  
         margin-bottom: 10px;  
 
-        @media (width <= 980px) {
+        @media (max-width: 980px) {
             font-size: 15px;
         }
     }
@@ -229,7 +229,7 @@
     .weather_res {
         @include text;  
         
-        @media (width <= 980px) {
+        @media (max-width: 980px) {
             font-size: 17px;
         }
     }
@@ -243,7 +243,7 @@
         justify-content: space-between;
         align-items: center;
 
-            @media (width <= 980px) {
+            @media (max-width: 980px) {
                 padding: clamp(0.938rem, calc(-0.729rem + 8.33vw), 4.375rem);
             }
     }
@@ -254,7 +254,7 @@
 
         text-transform: uppercase;
 
-            @media (width <= 980px) {
+            @media (max-width: 980px) {
                font-size: clamp(0.875rem, calc(0.784rem + 0.45vw), 1.063rem);
             }
     }
@@ -269,7 +269,7 @@
         @include text;   
         text-transform: uppercase;
 
-        @media (width <= 980px) {
+        @media (max-width: 980px) {
             font-size: clamp(1rem, calc(0.879rem + 0.61vw), 1.25rem);
         }
     }
@@ -284,7 +284,7 @@
         width: clamp(1.25rem, calc(-0.082rem + 2.17vw), 1.875rem);
         height: clamp(1.25rem, calc(-0.082rem + 2.17vw), 1.875rem);
 
-            @media (width <= 980px) {
+            @media (max-width: 980px) {
               width: clamp(1.25rem, calc(0.947rem + 1.52vw), 1.875rem);
               height: clamp(1.25rem, calc(0.947rem + 1.52vw), 1.875rem);
             }
@@ -341,7 +341,7 @@
         
         margin-bottom: 5px;
 
-            @media (width <= 980px) {
+            @media (max-width: 980px) {
               font-size: clamp(0.75rem, calc(0.659rem + 0.45vw), 0.938rem);
             }
     }
@@ -351,7 +351,7 @@
         font-weight: 500;
         line-height: normal; 
         
-            @media (width <= 980px){
+            @media (max-width: 980px){
                 font-size: clamp(0.75rem, calc(0.598rem + 0.76vw), 1.063rem);
             }
     }
@@ -388,7 +388,7 @@
 
         padding: 15px 0;
 
-            @media (width <= 980px) {
+            @media (max-width: 980px) {
                 padding: 15px 30px;
                 flex-direction: row;
             }
@@ -425,7 +425,7 @@
        transform: translateX(20px);
        width: max-content;
 
-            @media (width <= 980px) {
+            @media (max-width: 980px) {
                 margin-right: 0;
                 left: -235px;
                 bottom: -44px;
@@ -487,7 +487,7 @@
         @include leftInfo;
         transform: translateX(-50px);
 
-            @media (width <= 980px) {
+            @media (max-width: 980px) {
                  left: -19px;
                  bottom: -63px;
                  width: max-content;
