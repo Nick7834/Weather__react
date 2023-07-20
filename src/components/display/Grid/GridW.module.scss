@@ -1,0 +1,497 @@
+@mixin title {
+    font-size: clamp(0.875rem, calc(0.342rem + 0.87vw), 1.125rem);
+    font-weight: 700;
+    line-height: normal;    
+}
+
+@mixin text {
+    font-size: clamp(1rem, calc(0.068rem + 1.52vw), 1.438rem);
+    font-weight: 500;
+    line-height: normal;
+}
+
+// left info block 
+
+@mixin leftInfo {
+    visibility: hidden;
+    opacity: 0;
+    scale: .6;
+    transform: translateX(-50px);
+    margin-right: -170px;
+    position: absolute;
+    padding: 10px;
+    border-radius: 12px;
+    background: rgba(55, 62, 67, 0.8);
+    @include title;
+    font-size: 14px;
+
+    transition: all .3s ease-in-out;   
+}
+
+.grid {
+    color: white;
+    line-height: normal;  
+    padding: 50px 0;
+
+    // grid 
+    
+    display: grid;
+    justify-content: center;
+    grid-template-columns: clamp(4.063rem, calc(-0.598rem + 7.61vw), 6.25rem) 
+                           clamp(20.313rem, calc(4.867rem + 25.22vw), 27.563rem) 
+                           clamp(19.688rem, calc(2.91rem + 27.39vw), 27.563rem) 
+                           clamp(12.188rem, calc(-4.989rem + 28.04vw), 20.25rem);
+   
+    grid-template-areas: 
+        "one two three five"
+        "one four four five";
+    gap: clamp(0.938rem, calc(-1.06rem + 3.26vw), 1.875rem);
+
+
+    @media (width < 980px) {
+        grid-template-areas: 
+        "four"
+        "five"
+        "one"
+        "two"
+        "three";
+
+        grid-template-columns: 1fr;
+    }
+
+    .ones {
+        height: 100%;
+        border-radius: 40px;
+         background: rgba(230, 230, 230, 0.3);
+        filter: blur(7);
+
+       grid-area: one;
+    }
+
+    .twos, .threes {
+        height: 244px;
+        border-radius: 40px;
+       background: rgba(230, 230, 230, 0.3);
+       filter: blur(7);
+    }
+
+    .twos {
+        grid-area: two;
+    }
+
+    .threes {
+        grid-area: three;
+    }
+
+    .four {
+        width: 100%;
+        height: 244px;
+        border-radius: 40px;
+        background: rgba(230, 230, 230, 0.3);
+        filter: blur(7);
+        grid-area: four;
+        overflow: hidden;
+        
+        position: relative;
+    }
+
+    .graphic {
+        width: 100%;
+        height: 244px;
+        border-radius: 40px;
+        background: rgba(230, 230, 230, 0.3);
+        filter: blur(7);
+        grid-area: four;
+
+        overflow: auto;
+
+         display: flex;
+         flex-direction: column;
+         align-items: start;
+         justify-content: center;
+
+         &::-webkit-scrollbar {
+            width: 4px;
+            height: 14px;
+            background-color: rgba(230, 230, 230, 0);
+            border-radius: 20px;
+
+            @media (width <= 980px) {
+                width: 0px;
+                height: 0px;
+             }
+          }          
+
+            &::-webkit-scrollbar-thumb {
+                background-color: rgb(69, 87, 103, 0);
+                border-radius: 20px;
+            }
+
+            &:hover {
+                &::-webkit-scrollbar {
+                    background-color: rgba(230, 230, 230, .5);
+                  }          
+        
+                    &::-webkit-scrollbar-thumb {
+                        background-color: rgb(69, 87, 103, 1);
+                    }
+
+                    @media (width <= 980px) {
+
+                            &::-webkit-scrollbar {
+                                background-color: rgba(230, 230, 230, 0);
+                              }          
+                    
+                                &::-webkit-scrollbar-thumb {
+                                    background-color: rgb(69, 87, 103, 0);
+                                }
+                    }
+            }
+    }
+
+    .infoDay {
+       position: relative;
+       padding: 50px 16px;
+       width: 100%;
+
+       border-radius: 40px;
+       background: rgba(230, 230, 230, 0.3);
+       filter: blur(7);
+
+       overflow: hidden;
+
+       grid-area: five;
+
+            @media (width <= 980px) {
+                padding: 50px 10px 10px;
+            }
+    }
+
+    .main__f {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        @media (width <= 980px) {
+            flex-direction: row;
+            justify-content: space-between;
+            gap: 55px;
+
+            overflow: auto;
+
+            &::-webkit-scrollbar {
+                width: 0;
+                background-color: 0;
+              }  
+        }
+    }
+
+
+
+    .title {
+        font-size: clamp(0.938rem, calc(0.877rem + 0.3vw), 1.063rem);
+        font-weight: 700;
+
+        margin-bottom: 20px;
+
+        @media (width <= 980px) {
+           position: absolute;
+           top: 10px;
+           left: 25px;
+
+           margin-bottom: 0;
+        }
+    }
+
+    .info_weather {
+       display: flex;
+       align-items: center;
+       gap: 5px;
+
+        @media (width <= 980px) {
+            flex-direction: column;
+            gap: 0;
+            text-align: center;
+
+            gap: 10px;
+        }
+    }
+
+    .title_inf {
+        @include title;  
+        margin-bottom: 10px;  
+
+        @media (width <= 980px) {
+            font-size: 15px;
+        }
+    }
+
+    .weather_res {
+        @include text;  
+        
+        @media (width <= 980px) {
+            font-size: 17px;
+        }
+    }
+
+
+    // two
+
+    .threes {
+        padding: clamp(0.938rem, calc(-3.723rem + 7.61vw), 3.125rem);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+            @media (width <= 980px) {
+                padding: clamp(0.938rem, calc(-0.729rem + 8.33vw), 4.375rem);
+            }
+    }
+
+    .name {
+        @include title;   
+        margin-bottom: 10px;
+
+        text-transform: uppercase;
+
+            @media (width <= 980px) {
+               font-size: clamp(0.875rem, calc(0.784rem + 0.45vw), 1.063rem);
+            }
+    }
+
+    .block {
+        display: flex;
+        flex-direction: column;
+        gap: 50px
+    }
+
+    .result {
+        @include text;   
+        text-transform: uppercase;
+
+        @media (width <= 980px) {
+            font-size: clamp(1rem, calc(0.879rem + 0.61vw), 1.25rem);
+        }
+    }
+
+    .blocks {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .icon {
+        width: clamp(1.25rem, calc(-0.082rem + 2.17vw), 1.875rem);
+        height: clamp(1.25rem, calc(-0.082rem + 2.17vw), 1.875rem);
+
+            @media (width <= 980px) {
+              width: clamp(1.25rem, calc(0.947rem + 1.52vw), 1.875rem);
+              height: clamp(1.25rem, calc(0.947rem + 1.52vw), 1.875rem);
+            }
+    }
+
+    // sun one grid
+
+    .two {
+        padding: clamp(0.938rem, calc(-0.394rem + 2.17vw), 1.563rem);
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .astroInfo {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        gap: clamp(1.875rem, calc(1.269rem + 3.03vw), 3.125rem);
+    }
+
+
+    .sun {
+        width: 50px;
+        height: 50px;
+    }
+
+    .sunInfo {
+        @include title;   
+        font-size: 14px;  
+        text-transform: uppercase;
+    }
+
+    .earth {
+        display: block;
+        background-image: url('./public/Earth.svg');
+        background-repeat: no-repeat;
+        width: clamp(5.625rem, calc(4.716rem + 4.55vw), 7.5rem);
+        height: clamp(5.625rem, calc(4.716rem + 4.55vw), 7.5rem);
+    }
+
+    .moon {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .moon__title {
+        font-size: clamp(0.75rem, calc(0.217rem + 0.87vw), 1rem);
+        font-weight: 700;
+        line-height: normal;  
+        
+        margin-bottom: 5px;
+
+            @media (width <= 980px) {
+              font-size: clamp(0.75rem, calc(0.659rem + 0.45vw), 0.938rem);
+            }
+    }
+
+    .moon_res {
+        font-size: clamp(0.813rem, calc(0.28rem + 0.87vw), 1.063rem);
+        font-weight: 500;
+        line-height: normal; 
+        
+            @media (width <= 980px){
+                font-size: clamp(0.75rem, calc(0.598rem + 0.76vw), 1.063rem);
+            }
+    }
+
+    .moons {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    // clock 
+
+    .clockG {
+        padding: 11px 25px;
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        font-size: 15px;
+        font-weight: 500;
+        line-height: normal;
+    }
+
+    // one grid
+
+    .one {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        padding: 15px 0;
+
+            @media (width <= 980px) {
+                padding: 15px 30px;
+                flex-direction: row;
+            }
+    }
+
+    // info
+
+    .info {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .info__img {
+        cursor: pointer;
+        img {
+            width: 50px;
+            height: 50px;
+        }
+
+        &:hover {
+            + .block__info {
+                visibility: visible;
+                opacity: 1;
+                scale: 1;
+                transform: translateX(74px);
+            }
+        }
+    }
+
+    .block__info {
+       @include leftInfo;
+       transform: translateX(20px);
+       width: max-content;
+
+            @media (width <= 980px) {
+                margin-right: 0;
+                left: -235px;
+                bottom: -44px;
+            }
+    }
+
+    // top
+
+    .one__top {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+
+        gap: 30px;
+    }
+
+    .title__infs {
+        @include title;
+    }
+
+    .info__img_t {
+        cursor: pointer;
+        margin-bottom: 10px;
+        width: 50px;
+        height: 50px;
+
+        img {
+            width: 50px;
+            height: 50px;
+        }
+
+        &:hover {
+            + .block__info_t {
+                visibility: visible;
+                opacity: 1;
+                scale: 1;
+                transform: translateX(0);
+            }
+        }
+    }
+
+    .top__main{
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        width: 100%;
+        height: 50px;
+    }
+
+    .tops__infs {
+        text-align: center;
+    }
+
+    .block__info_t {
+        @include leftInfo;
+        transform: translateX(-50px);
+
+            @media (width <= 980px) {
+                 left: -19px;
+                 bottom: -63px;
+                 width: max-content;
+            }
+    }
+
+}
