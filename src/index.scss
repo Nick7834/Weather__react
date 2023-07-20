@@ -11,13 +11,12 @@
 }
 
 .photo {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     background: rgb(77, 158, 185);
     background-repeat: no-repeat;
     background-position: center center;
-    // background-attachment: fixed;
     background-size: cover;
     width: 100%;
     min-height: 100vh;
