@@ -18,7 +18,7 @@ export const Search = ({ onChange }) => {
 
                 <label className={styles.label}>
                     <form onSubmit={onSubmitForm} className={styles.form} >
-                        <img src="/public/search.svg" alt="search" />
+                        <img src="./search.svg" alt="search" />
                         <input type="text" value={search} onChange={e => setSearch(e.target.value)} placeholder='Search city' className={styles.search} />
                     </form>
                 </label>
