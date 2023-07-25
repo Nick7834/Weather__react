@@ -34,5 +34,6 @@ export const Main = ({add, times, icon}) => {
         </div>
  
     </div>
+    
   )
 }
