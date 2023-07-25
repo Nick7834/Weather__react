@@ -12,7 +12,7 @@ import condition from "./condition.js";
 import iconw from './bd.icon';
 
 
-function App() {
+const App = () => {
 
     const [weather, setWeather] = useState({});
 
