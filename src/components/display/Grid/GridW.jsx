@@ -23,7 +23,7 @@ export const GridW = ({weatherAdd}) => {
                       <div className={styles.info__img_t}><img src="./heat.svg" alt="cloud" /></div>
                       <div className={styles.block__info_t}>Heat index</div>
                   </div>
-                  <div className={styles.title__infs}>{weatherAdd?.forecast?.forecastday[0].hour[`${(weatherAdd?.current?.last_updated).slice(11, -3).replace(/^0+/, '')}`]?.heatindex_c}°C</div>
+                  <div className={styles.title__infs}>{weatherAdd?.forecast?.forecastday[0].hour[`${(weatherAdd?.current?.last_updated).slice(11, -3).replace(0, '')}`]?.heatindex_c}°C</div>
               </div>
 
               <div className={styles.info}>

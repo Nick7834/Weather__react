@@ -2,6 +2,7 @@ import React, { useEffect, useMemo, useState } from 'react'
 import { Main } from './components/display/Main/Main'
 import { GridW } from './components/display/Grid/GridW'
 import { Search } from './components/ul/Search/Search';
+import { CSSTransition } from 'react-transition-group';
 import { compile } from 'sass';
 
 // img for api
@@ -24,7 +25,7 @@ function App() {
 
     // active block 
 
-    // const [active, setActive] = useState(false);
+    const [active, setActive] = useState(false);
 
     // input value
 
@@ -51,7 +52,7 @@ function App() {
 
           if (data.error) {
             setWeather(data)
-            // setActive(true)
+            setActive(true)
           } else {
               const info = condition.find(obj => obj.code === data.current.condition.code);
               const idData = data.current.is_day;
@@ -158,11 +159,13 @@ function App() {
 
             <Search onChange={soo} />
 
-            {weather === undefined ? <div className='error'>The city was not found!</div> : <div>
+            {weather === undefined ? <CSSTransition in={active} timeout={200} classNames="alert"><div className='error'>The city was not found!</div></CSSTransition> : <div>
                <Main add={weather} times={time} icon={icons} />
 
                <GridW weatherAdd={weather} /> 
             </div>}
+
+            
 
         </div>
       </div>
