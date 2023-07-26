@@ -25,10 +25,12 @@ ChartJS.register(
 export const Graphic = ({graphicAdd}) => {
 
     const data = {
-        labels: ['1', '2', '3', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '23'],
+        labels: ['00:00', '01:00', '02:00', '03:00', '04:00', '05:00', '06:00', '07:00', '08:00', '09:00', '10:00', '11:00', '12:00', '13:00', '14:00', '15:00', '16:00', '17:00', '18:00', '19:00', '20:00', '21:00', '22:00', '23:00'],
+
         datasets: [
           {
-            data: [graphicAdd?.forecast?.forecastday[0].hour[0].temp_c, 
+            data: [
+            graphicAdd?.forecast?.forecastday[0].hour[0].temp_c,
             graphicAdd?.forecast?.forecastday[0].hour[1].temp_c,
             graphicAdd?.forecast?.forecastday[0].hour[2].temp_c,
             graphicAdd?.forecast?.forecastday[0].hour[3].temp_c,
@@ -57,15 +59,29 @@ export const Graphic = ({graphicAdd}) => {
             // backgroundColor: 'transparent',
             // pointBorderColor: 'transparent',
             pointBorderWidth: 7,
-            tension: .60,
+            tension: .30,
           },
          
         ],
+
       }
     
     const options = {
+       responsive: true,
         plugins: {
           legend: false,
+
+          tooltip: {
+            mode: 'index',
+            intersect: false,
+            displayColors: false,
+          }
+        },
+
+
+        hover: {
+          mode: 'nearest',
+          intersect: true
         },
     
         scales: {
@@ -101,7 +117,7 @@ export const Graphic = ({graphicAdd}) => {
 
   return (
     <div>
-        <Line data={data} options={options} height={100} width={950}/>
+        <Line data={data} options={options} height={200} width={950}/>
     </div>
   )
 }
