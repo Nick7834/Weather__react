@@ -56,8 +56,6 @@ export const Graphic = ({graphicAdd}) => {
             graphicAdd?.forecast?.forecastday[0].hour[23].temp_c,],
 
             borderColor: '#FFF',
-            // backgroundColor: 'transparent',
-            // pointBorderColor: 'transparent',
             pointBorderWidth: 7,
             tension: .30,
           },

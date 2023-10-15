@@ -52,7 +52,7 @@ const imgw = {
         },
 
         {
-        "Sunny": "https://klike.net/uploads/posts/2022-11/1667370297_2-3.jpg",
+        "Sunny": "https://s1.1zoom.ru/b6730/156/Sky_Clouds_Sun_559129_2560x1440.jpg",
         "Clear": "https://lifehacker.ru/wp-content/uploads/2017/03/bluesky_1488891825.jpg",
         "Partly Cloudy": "https://get.pxhere.com/photo/tree-nature-cloud-sky-sunlight-frost-atmosphere-daytime-spring-weather-cumulus-blue-blue-sky-trees-freezing-day-s-meteorological-phenomenon-973666.jpg",
         "Cloudy": "https://res.allmacwallpaper.com/get/iMac-27-inch-wallpapers/Cloudy-Sky-2560x1440/11542-10.jpg",

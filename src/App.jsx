@@ -36,9 +36,7 @@ const App = () => {
     const soo = (s) => {
       setSearch(s)
     }
-
-
-
+    
     // api main
   
       const apiKeys = 'ff7dc3a1cf2847a985692006231206';
