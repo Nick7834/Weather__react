@@ -4,7 +4,7 @@ const imgw = {
             "Clear": "https://gamerwall.pro/uploads/posts/2022-02/1645559270_1-gamerwall-pro-p-nebo-bez-luni-krasivie-oboi-1.jpg",
             "Cloudy": "https://res.allmacwallpaper.com/get/iMac-27-inch-wallpapers/Cloudy-Sky-2560x1440/11542-10.jpg",
             "Partly Cloudy": "https://get.pxhere.com/photo/tree-nature-cloud-sky-sunlight-frost-atmosphere-daytime-spring-weather-cumulus-blue-blue-sky-trees-freezing-day-s-meteorological-phenomenon-973666.jpg",
-            "Overcast": "https://get.pxhere.com/photo/nature-horizon-cloud-sky-skyline-sunlight-cloudy-dawn-atmosphere-dusk-weather-cumulus-overcast-skies-clouds-lovers-beautiful-skyporn-crazyclouds-gloomy-lookup-photooftheday-meteorological-phenomenon-instagood-instasky-epicsky-skyback-insta-iskyhub-instaclouds-atmospheric-phenomenon-553704.jpg",
+            "Overcast": "https://gagaru.club/uploads/posts/2023-02/1677485699_gagaru-club-p-pasmurnoe-krasivoe-nebo-oboi-79.jpg",
             "Mist": "https://catherineasquithgallery.com/uploads/posts/2021-02/1614423988_28-p-temnii-fon-tuman-37.jpg",
             "Patchy rain nearby": "https://phonoteka.org/uploads/posts/2022-01/1643288785_34-phonoteka-org-p-dozhdlivoe-nebo-fon-37.jpg",
             "Patchy snow nearby": "https://kartinkin.net/uploads/posts/2021-07/1627389457_8-kartinkin-com-p-zimnee-nebo-tekstura-krasivo-8.jpg",
